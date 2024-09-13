@@ -1,10 +1,9 @@
 /*
-*   File Name: exBMain.cpp
-*   Assignment: Lab 1 Exercise B
+*   File Name: exBmain.cpp
+*   Assignment: Lab 1 Exercise C
 *   Completed by: Trevor Nguyen and Zachary Lam
 *   Submission Date: Sept 13, 2024 
 */
-
 #include <assert.h>
 #include <iostream>
 #include "dictionaryList.h"
@@ -27,7 +26,7 @@ int main()
   test_copying();
     
  // Uncomment the call to test_copying when DictionaryList::copy is properly defined
- // test_finding(dl); 
+  test_finding(dl);
 
   return 0;
 }

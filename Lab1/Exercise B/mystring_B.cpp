@@ -1,6 +1,6 @@
 /*
 *   File Name: mystring_B.cpp
-*   Assignment: Lab 1 Exercise B
+*   Assignment: Lab 1 Exercise C
 *   Completed by: Trevor Nguyen and Zachary Lam
 *   Submission Date: Sept 13, 2024 
 */

@@ -1,10 +1,9 @@
 /*
 *   File Name: mystring_B.h
-*   Assignment: Lab 1 Exercise B
+*   Assignment: Lab 1 Exercise C
 *   Completed by: Trevor Nguyen and Zachary Lam
 *   Submission Date: Sept 13, 2024 
 */
-
 #include <iostream>
 #include <string>
 using namespace std;

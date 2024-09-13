@@ -1,6 +1,6 @@
 /*
 *   File Name: dictionaryList.cpp
-*   Assignment: Lab 1 Exercise B
+*   Assignment: Lab 1 Exercise C
 *   Completed by: Trevor Nguyen and Zachary Lam
 *   Submission Date: Sept 13, 2024 
 */
@@ -169,26 +169,57 @@ void DictionaryList::make_empty()
 
 void DictionaryList::find(const Key& keyA)
 {
-  cout << "\nDon't know how to find " << keyA << " (or any other key).\n";
-  cout << "... so exit is being called.\n";
-  exit(1);
+  cursorM = headM;
+  while (cursorM != 0 && cursorM->keyM != keyA)
+    cursorM = cursorM->nextM;
 }
 
 
 void DictionaryList::destroy()
 {
-  cout << "\nWARNING: DictionaryList::destroy() is abandoning nodes\n"
-       << "when it should be deleting them!\n";
+  cursorM = headM;
+  while (cursorM != 0)
+    {
+      Node *p = cursorM;
+      cursorM = cursorM->nextM;
+      delete p;
+    }
   headM = 0;
+  sizeM = 0;
+  cursorM = 0;
 }
 
 
 void DictionaryList::copy(const DictionaryList& source)
 {
-  
-  cout << "\nDictionaryList::copy is not implemented properly,\n"
-       << "so the program is calling exit.\n";
-  exit(1);
+    if (source.headM == 0) {
+        headM = 0;
+        cursorM = 0;
+        sizeM = 0;
+        return;
+    }
+
+    headM = new Node(source.headM->keyM, source.headM->datumM, 0);
+
+    Node* src_node = source.headM->nextM;
+    Node* dest_node = headM;
+
+    while (src_node != 0) {
+        dest_node->nextM = new Node(src_node->keyM, src_node->datumM, 0);
+
+        if (src_node == source.cursorM) {
+            cursorM = dest_node->nextM;
+        }
+
+        dest_node = dest_node->nextM;
+        src_node = src_node->nextM;
+    }
+
+    sizeM = source.sizeM;
+
+    if (source.cursorM == source.headM) {
+        cursorM = headM;
+    }
 }
 
 

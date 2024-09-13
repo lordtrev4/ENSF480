@@ -1,6 +1,6 @@
 /*
-*   File Name: dictionaryList.h
-*   Assignment: Lab 1 Exercise B
+*   File Name: disctionaryList.h
+*   Assignment: Lab 1 Exercise C
 *   Completed by: Trevor Nguyen and Zachary Lam
 *   Submission Date: Sept 13, 2024 
 */
