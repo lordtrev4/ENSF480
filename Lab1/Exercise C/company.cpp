@@ -9,16 +9,51 @@
 #include <vector>
 using namespace std;
 
-struct Comapany {
-    string companyName;
-    string companyAddress;
+class Company {
+    private:
+        Date dateEstablished;
+        Address address;
+        string Name;
+    public:
+};
 
-    vector<string> employees;
+class Employee{
+    private:
+        Name name;
+        Address address;
+        Date dateOfBirth;
+        string employeeState;
+    public:
+};
 
-    string dateEstablished;
+class Customer {
+    private:
+        Name name;
+        Address address;
+        string phoneNumber;
+    public:
+};
 
-    vector<string> employeeState;
+class Name  {
+    string firstName;
+    string middleName;
+    string lastName;
+};
 
-    vector<string> customers;
+class Address {
+    private:
+        string street;
+        string city;
+        string province;
+        string country;
+        string postalCode;
+    public:
+};
 
+class Date {
+    private:
+        string month;
+        int day;
+        int year;
+    public:
 };
