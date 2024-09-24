@@ -17,6 +17,17 @@ public:
   Mystring();
   // PROMISES: Empty string object is created.
 
+  bool operator>=(const Mystring& other) const;
+  bool operator<=(const Mystring& other) const;
+  bool operator!=(const Mystring& other) const;
+  bool operator>(const Mystring& other) const;
+  bool operator<(const Mystring& other) const;
+  bool operator==(const Mystring& other) const;
+  // copiloted code
+  
+    // Overload the insertion operator
+    friend std::ostream& operator<<(std::ostream& os, const Mystring& str);
+
   Mystring(int n); 
   // PROMISES: Creates an empty string with a total capacity of n.
   //           In other words, dynamically allocates n elements for

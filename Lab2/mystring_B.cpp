@@ -152,7 +152,35 @@ void Mystring::memory_check(char* s)
     }
 }
 
+// copiloted code again
+bool Mystring::operator>=(const Mystring& other) const {
+    return std::strcmp(this->str, other.str) >= 0;
+}
 
+bool Mystring::operator<=(const Mystring& other) const {
+    return std::strcmp(this->str, other.str) <= 0;
+}
+
+bool Mystring::operator!=(const Mystring& other) const {
+    return std::strcmp(this->str, other.str) != 0;
+}
+
+bool Mystring::operator>(const Mystring& other) const {
+    return std::strcmp(this->str, other.str) > 0;
+}
+
+bool Mystring::operator<(const Mystring& other) const {
+    return std::strcmp(this->str, other.str) < 0;
+}
+
+bool Mystring::operator==(const Mystring& other) const {
+    return std::strcmp(this->str, other.str) == 0;
+}
+
+std::ostream& operator<<(std::ostream& os, const Mystring& str) {
+    os << str.str;
+    return os;
+}
 
 
 
