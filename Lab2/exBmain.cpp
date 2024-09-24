@@ -24,7 +24,7 @@ int main()
     
  // Uncomment the call to test_copying when DictionaryList::copy is properly defined
  // test_finding(dl);
- // test_operator_overloading(dl);
+  test_operator_overloading(dl);
   
   return 0;
 }
@@ -153,7 +153,7 @@ void test_finding(DictionaryList& dl)
     
     cout << "***----Finished tests of finding -------------------------***\n\n";
 }
-#if 0
+#if 1
 void test_operator_overloading(DictionaryList& dl)
 {
 
