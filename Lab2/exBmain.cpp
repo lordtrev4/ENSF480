@@ -1,5 +1,9 @@
-// exBmain.cpp
-// ENSF 480 - Lab 2 - Exercise A
+/*
+*   File Name: mystring_B.cpp
+*   Assignment: Lab 2 Exercise A
+*   Completed by: Trevor Nguyen and Zachary Lam
+*   Submission Date: Sept 23, 2024 
+*/
 #include <assert.h>
 #include <iostream>
 #include "dictionaryList.h"

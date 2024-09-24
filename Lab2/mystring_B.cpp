@@ -1,8 +1,8 @@
 /*
 *   File Name: mystring_B.cpp
-*   Assignment: Lab 1 Exercise C
+*   Assignment: Lab 2 Exercise A
 *   Completed by: Trevor Nguyen and Zachary Lam
-*   Submission Date: Sept 13, 2024 
+*   Submission Date: Sept 23, 2024 
 */
 #include "mystring_B.h"
 #include <string.h>
