@@ -1,5 +1,5 @@
 /*
-*   File Name: mystring_B.cpp
+*   File Name: dictionaryList.cpp
 *   Assignment: Lab 2 Exercise A
 *   Completed by: Trevor Nguyen and Zachary Lam
 *   Submission Date: Sept 23, 2024 
@@ -64,7 +64,7 @@ const Datum& DictionaryList::cursor_datum() const
   return cursorM->datumM;
 }
 
-void DictionaryList::insert(const int& keyA, const Mystring& datumA)
+void DictionaryList::insert(const int& keyA, const Datum& datumA)
 {
   // Add new node at head?                                                                                  
   if (headM == 0 || keyA < headM->keyM) {
@@ -222,4 +222,33 @@ void DictionaryList::copy(const DictionaryList& source)
     }
 }
 
+const Datum& DictionaryList::operator[](int index) const{
+  if (index >= sizeM || index < 0){
+    cout << "Error, cannot access data" << endl;
+    exit(1);
+  }
+  if (headM == nullptr) {
+    throw std::out_of_range("No items found in list");
+  }
+  Node* p = headM;
+  for (int i = 0; i < index; ++i) {
+    p = p->nextM;
+  }
+  return p->datumM; // returns the reference to Datum object
 
+
+}
+
+std::ostream& operator<<(std::ostream& os, const DictionaryList& source){
+    if (source.headM == nullptr){ //checks if the list is empty
+      os << "No items found in list" << std::endl;
+    }
+    else{
+      Node* p = source.headM;
+      while(p != nullptr) { // loop continues as pointer p is not nullptr
+        os << p->keyM << " " << p->datumM << std::endl;
+        p = p->nextM;
+      }
+    }
+    return os;
+}

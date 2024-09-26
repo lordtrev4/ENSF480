@@ -1,5 +1,5 @@
 /*
-*   File Name: mystring_B.cpp
+*   File Name: exBmain.cpp
 *   Assignment: Lab 2 Exercise A
 *   Completed by: Trevor Nguyen and Zachary Lam
 *   Submission Date: Sept 23, 2024 

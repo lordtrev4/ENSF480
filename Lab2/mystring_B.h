@@ -1,5 +1,5 @@
 /*
-*   File Name: mystring_B.cpp
+*   File Name: mystring_B.h
 *   Assignment: Lab 2 Exercise A
 *   Completed by: Trevor Nguyen and Zachary Lam
 *   Submission Date: Sept 23, 2024 
@@ -16,17 +16,6 @@ class Mystring {
 public:
   Mystring();
   // PROMISES: Empty string object is created.
-
-  bool operator>=(const Mystring& other) const;
-  bool operator<=(const Mystring& other) const;
-  bool operator!=(const Mystring& other) const;
-  bool operator>(const Mystring& other) const;
-  bool operator<(const Mystring& other) const;
-  bool operator==(const Mystring& other) const;
-  // copiloted code
-  
-    // Overload the insertion operator
-    friend std::ostream& operator<<(std::ostream& os, const Mystring& str);
 
   Mystring(int n); 
   // PROMISES: Creates an empty string with a total capacity of n.
@@ -94,12 +83,30 @@ public:
   // REQUIRES: s refers to an object of class Mystring
   // PROMISES: retruns true if charsM is not equal s.charsM.
 
+  // Overloading the comparison operators  
+  bool operator>=(const Mystring& other) const;
+
+  bool operator<=(const Mystring& other) const;
+
+  bool operator!=(const Mystring& other) const;
+
+  bool operator>(const Mystring& other) const;
+
+  bool operator<(const Mystring& other) const;
+
+  bool operator==(const Mystring& other) const;
+  
+  char& operator [](int index) const;
+  
+  // Overload the insertion operator
+  friend std::ostream& operator<<(std::ostream& os, const Mystring& str);
  private:
 
   int lengthM; // the string length - number of characters excluding \0
   char* charsM; // a pointer to the beginning of an array of characters, allocated dynamically.
   void memory_check(char* s);
   // PROMISES: if s points to NULL terminates the program.
+
 };
 #endif
 

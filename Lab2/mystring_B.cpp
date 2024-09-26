@@ -152,39 +152,42 @@ void Mystring::memory_check(char* s)
     }
 }
 
-// copiloted code again
-bool Mystring::operator>=(const Mystring& other) const {
-    return std::strcmp(this->str, other.str) >= 0;
+bool Mystring::operator >=(const Mystring& s) const {
+  return strcmp(charsM, s.charsM) >= 0;
 }
 
-bool Mystring::operator<=(const Mystring& other) const {
-    return std::strcmp(this->str, other.str) <= 0;
+bool Mystring::operator <=(const Mystring& s) const {
+  return strcmp(charsM, s.charsM) <= 0;
 }
 
-bool Mystring::operator!=(const Mystring& other) const {
-    return std::strcmp(this->str, other.str) != 0;
+bool Mystring::operator !=(const Mystring& s) const {
+  return !(strcmp(charsM, s.charsM) == 0);
 }
 
-bool Mystring::operator>(const Mystring& other) const {
-    return std::strcmp(this->str, other.str) > 0;
+bool Mystring::operator <(const Mystring& s) const {
+  return strcmp(charsM, s.charsM) < 0;
 }
 
-bool Mystring::operator<(const Mystring& other) const {
-    return std::strcmp(this->str, other.str) < 0;
+bool Mystring::operator >(const Mystring& s) const {
+  return strcmp(charsM, s.charsM) > 0;
 }
 
-bool Mystring::operator==(const Mystring& other) const {
-    return std::strcmp(this->str, other.str) == 0;
+bool Mystring::operator ==(const Mystring& s) const {
+  return strcmp(charsM, s.charsM) == 0;
 }
 
-std::ostream& operator<<(std::ostream& os, const Mystring& str) {
-    os << str.str;
+char& Mystring::operator [](int index) const {
+  if (index < 0 || index >= lengthM){ // checking if index is out of bounds
+    cout << "Error accessing index: " << index << endl;
+    exit(1);
+  }
+  return charsM[index];
+}
+
+std::ostream& operator<<(std::ostream& os, const Mystring& myStr) {
+    os << myStr.charsM;
     return os;
 }
-
-
-
-
 
 
 

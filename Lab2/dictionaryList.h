@@ -1,5 +1,5 @@
 /*
-*   File Name: mystring_B.cpp
+*   File Name: dictionaryList.h
 *   Assignment: Lab 2 Exercise A
 *   Completed by: Trevor Nguyen and Zachary Lam
 *   Submission Date: Sept 23, 2024 
@@ -26,6 +26,7 @@ using namespace std;
 
 // Edit these typedefs to change the key or datum types, if necessary.
 typedef int Key; 
+
 typedef Mystring Datum;
 
 // THE NODE TYPE
@@ -33,9 +34,12 @@ typedef Mystring Datum;
 //    Data members of Node are private, and class DictionaryList
 //    is declared as a friend. For details on the friend keyword refer to your
 //    lecture notes.
+class DictionaryList;
 
 class Node {
   friend class DictionaryList;
+  friend std::ostream& operator<<(std::ostream& os, const DictionaryList& dl);
+
 private:
   Key keyM;
   Datum datumM;
@@ -67,6 +71,9 @@ public:
   const Datum& cursor_datum() const;
   // REQUIRES: cursor_ok()
   // PROMISES: Returns datum of key/datum pair to which cursor is attached.
+
+  const Datum& operator[](int index) const;
+  // makes sure Datum object cannot be modified when accessed through deferencec to DL
 
   void insert(const Key& keyA, const Datum& datumA);
   // PROMISES:
@@ -104,6 +111,7 @@ public:
   void make_empty();
   // PROMISES: size() == 0.
 
+  friend std::ostream& operator<<(std::ostream& os, const DictionaryList& dl);
 private:
   int sizeM;
   Node *headM;
