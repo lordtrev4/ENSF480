@@ -1,5 +1,9 @@
-// LookupTable.h
-// ENSF 480 - Lab 3, Ex C
+/*
+*   File Name: lookupTable.h
+*   Assignment: Lab 3 Exercise C
+*   Completed by: Trevor Nguyen and Zachary Lam
+*   Submission Date: Sept 30, 2024 
+*/
 
 #ifndef LOOKUPTABLE_H
 #define LOOKUPTABLE_H

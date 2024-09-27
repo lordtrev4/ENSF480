@@ -1,6 +1,9 @@
-
-// ENSF 480 - Lab 3, Ex C
-// M. Moussavi
+/*
+*   File Name: mainLab3Ex.cpp
+*   Assignment: Lab 3 Exercise C
+*   Completed by: Trevor Nguyen and Zachary Lam
+*   Submission Date: Sept 30, 2024 
+*/
 
 #include <assert.h>
 #include <iostream>

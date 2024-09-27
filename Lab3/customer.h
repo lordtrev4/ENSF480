@@ -1,5 +1,9 @@
-// ENSF 480 - Lab 3, Ex C
-// M. Moussavi
+/*
+*   File Name: customer.h
+*   Assignment: Lab 3 Exercise C
+*   Completed by: Trevor Nguyen and Zachary Lam
+*   Submission Date: Sept 30, 2024 
+*/
 #ifndef CUSTOMER
 #define CUSTOMER
 #include <iostream>
