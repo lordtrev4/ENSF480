@@ -42,7 +42,7 @@ struct Pair
   LT_Datum datum;
 };
 
-
+ 
 class LT_Node {
   friend class LookupTable;
 private:
@@ -53,8 +53,11 @@ private:
   LT_Node(const Pair& pairA, LT_Node *nextA);
 };
 
+template<typename Key, typename Datum> // check later why this is like this 
 class LookupTable {
  public:
+  typedef Key LT_Key;
+  typedef Datum LT_Datum;  // check these later too 
 
   // Nested class
   class Iterator {
@@ -70,8 +73,9 @@ class LookupTable {
     const LT_Datum& operator ++(int);
     int operator !();
 
-    void step_fwd(){  assert(LT->cursor_ok());
-    LT->step_fwd();}
+    void step_fwd(){    
+      assert(LT->cursor_ok());
+      LT->step_fwd();}
   };
 
   LookupTable();

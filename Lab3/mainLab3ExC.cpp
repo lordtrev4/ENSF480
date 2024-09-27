@@ -43,7 +43,9 @@ int main()
   return 0;
 }
 
-void print(LookupTable& lt)
+template<typename KeyType, typename DatumType>
+void print (const LookupTable<KeyType, DatumType>& lt)
+// (LookupTable& lt)
 {
   if (lt.size() == 0)
     cout << "  Table is EMPTY.\n";
@@ -52,7 +54,9 @@ void print(LookupTable& lt)
   }
 }
 
-void try_to_find(LookupTable& lt, int key)
+template<typename KeyType, typename DatumType>
+void try_to_find (LookupTable<KeyType, DatumType>& lt, const KeyType& key)
+// (LookupTable& lt, int key)
 {
   lt.find(key);
   if (lt.cursor_ok())
