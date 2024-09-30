@@ -1,17 +1,19 @@
 /*
-*   File Name: mystring2.cpp
-*   Assignment: Lab 3 Exercise C
-*   Completed by: Trevor Nguyen and Zachary Lam
-*   Submission Date: Sept 30, 2024 
+* File Name: mystring2.cpp
+* Assignment: Lab 3 Exercise B
+* Lab section: B01
+* Completed by: Zachary Lam, Trevor Nguyen
+* Development Date: Sept. 27, 2024
 */
+
 #include "mystring2.h"
 #include <string.h>
 #include <iostream>
 using namespace std;
 
 Mystring::Mystring()
-{ 
-  charsM = new char[1]; 
+{
+  charsM = new char[1];
   charsM[0] = '\0';
   lengthM = 0;
 }
@@ -63,13 +65,13 @@ void Mystring::set_char(int pos, char c)
 {
   if(pos < 0 && pos >= length()){
     cerr << "\nset_char: the position is out of boundary."
-	 << " Nothing was changed.";
+   << " Nothing was changed.";
     return;
-  } 
+  }
 
   if (c != '\0'){
     cerr << "\nset_char: char c is empty."
-	 << " Nothing was changed.";
+   << " Nothing was changed.";
     return;
   }
 
@@ -128,16 +130,4 @@ int Mystring::isLessThan (const Mystring& s)const
 {
   return (strcmp(charsM, s.charsM)< 0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
