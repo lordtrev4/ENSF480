@@ -33,13 +33,13 @@ class Vehicle : public Movable, public Resizeable{
 };
 
 // class Car uses Vehicle
-class Car : public Vehicle {
+class Car final: public Vehicle {
     private:
         int seats;
     public: 
         void turn();
         Car(const string& name, int seats) : Vehicle(name), seats(seats) {}
-        ~Car() {};
+        ~Car() {}; 
 };
 // no need for a destructor as the destructor of the base class is called
 
