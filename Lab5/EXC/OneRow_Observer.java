@@ -16,7 +16,7 @@ public class OneRow_Observer implements Observer {
     }
 
     public void display(ArrayList<Double> data) {
-        System.out.println("One-Row Observer: Data Changed:");
+        System.out.println("\nNotification to One-Row Observer: Data Changed:");
         for (Double d : data) {
             System.out.print(d + " ");
         }

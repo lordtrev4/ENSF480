@@ -16,7 +16,7 @@ public class FiveRowsTable_Observer implements Observer {
     }
 
     public void display(ArrayList<Double> data) {
-        System.out.println("Five-Rows Table Observer: Data Changed:");
+        System.out.println("\nNotification to Five-Rows Table Observer: Data Changed:");
         int count = 0;
         for (Double d : data) {
             System.out.print(d + " ");

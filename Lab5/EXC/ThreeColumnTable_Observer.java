@@ -16,7 +16,7 @@ public class ThreeColumnTable_Observer implements Observer {
     }
 
     public void display(ArrayList<Double> data) {
-        System.out.println("Three-Column Table Observer: Data Changed:");
+        System.out.println("\nNotification to Three-Column Table Observer: Data Changed:");
         int count = 0;
         for (Double d : data) {
             System.out.print(d + " ");

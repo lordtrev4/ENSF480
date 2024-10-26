@@ -14,6 +14,7 @@ public class DoubleArrayListSubject implements Subject {
     @Override
     public void registerObserver(Observer o) {
         observers.add(o);
+        o.update(data);
     }
 
     @Override
