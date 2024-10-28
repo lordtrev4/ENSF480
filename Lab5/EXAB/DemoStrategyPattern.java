@@ -46,6 +46,22 @@ public class DemoStrategyPattern {
 			v2.setSortStrategy(new InsertionSorter<Integer>());;
 			v2.performSort();
 	        System.out.println("\nThe values in MyVector object v2 after performing InsertionSorter is:");
-			v2.display();	
+			v2.display();
+			
+			MyVector<Double> v3 = new MyVector<>(50);
+
+			// Populate v3 with 5 randomly generated numbers
+			for (int i = 4; i >= 0; i--) {
+			   Item<Double> item = new Item<>(rand.nextDouble() * 100);
+			   v3.add(item);
+			}
+	  
+			// Display original data in MyVector v3, set SelectionSorter, and perform sorting
+			System.out.println("\nThe original values in v3 object are:");
+			v3.display();
+			v3.setSortStrategy(new SelectionSorter<>());
+			v3.performSort();
+			System.out.println("\nThe values in MyVector object v3 after performing SelectionSorter are:");
+			v3.display();
 	}
 }
