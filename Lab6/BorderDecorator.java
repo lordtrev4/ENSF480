@@ -1,23 +1,23 @@
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.BasicStroke;
+import java.awt.Color;
 
 public class BorderDecorator extends Decorator {
-    private int x, y, width, height;
-
     public BorderDecorator(Component component, int x, int y, int width, int height) {
-        super(component);
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
+        super(component, x, y, width, height);
     }
-
+    
     @Override
     public void draw(Graphics g) {
-        super.draw(g); // Draw the wrapped component first
+        super.draw(g);
+        
+        // Draw dashed border
         Graphics2D g2d = (Graphics2D) g;
-        g2d.setStroke(new BasicStroke(3)); // Set border thickness
-        g2d.drawRect(x, y, width, height); // Draw border
+        Stroke dashed = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 
+                                      0, new float[]{9}, 0);
+        g2d.setStroke(dashed);
+        g2d.setColor(Color.BLACK);
+        g2d.drawRect(x, y, width, height);
     }
 }
