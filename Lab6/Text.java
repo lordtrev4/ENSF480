@@ -13,7 +13,7 @@ public class Text implements Component {
     
     @Override
     public void draw(Graphics g) {
-        g.setColor(Color.GREEN);
-        g.drawString(text, x, y);
+        g.setColor(Color.BLACK);
+        g.drawString(text, x-3, y);
     }
 }

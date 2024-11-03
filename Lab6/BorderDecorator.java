@@ -15,7 +15,8 @@ public class BorderDecorator extends Decorator {
         
         // Draw dashed border
         Graphics2D g2d = (Graphics2D) g;
-        Stroke dashed = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 
+        // Using smaller dash pattern (3) and setting stroke thickness to 3
+        Stroke dashed = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 
                                       0, new float[]{9}, 0);
         g2d.setStroke(dashed);
         g2d.setColor(Color.BLACK);
