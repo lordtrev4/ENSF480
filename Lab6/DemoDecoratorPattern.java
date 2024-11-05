@@ -1,3 +1,10 @@
+/*
+File Name: DemoDecoratorPattern.java
+Assignment: Lab 6 Exercise AB
+Lab section: B01
+Completed by: Trevor Nguyen
+Development Date: Nov 3, 2024
+*/
 import java.awt.Font;
 import java.awt.Graphics;
 import javax.swing.JFrame;

@@ -1,3 +1,11 @@
+/*
+File Name: ColouredGlassDecorator.java
+Assignment: Lab 6 Exercise AB
+Lab section: B01
+Completed by: Trevor Nguyen
+Development Date: Nov 3, 2024
+*/
+
 import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Graphics;
